@@ -1,18 +1,18 @@
 pipeline {
     agent any
     stages {
-       stage('Build Code') {
+       stage('Test Code') {
            steps {
-               sh """
-               echo "Building Artifact from Develop Branch"
-               """
+               
+               echo "Test Code"
+               
            }
        }
       stage('Deploy Code') {
           steps {
-               sh """
-               echo "Deploying Code from Develop"
-               """
+               
+               echo "Deploying Code to Tomcat server"
+            
           }
       }
    }
